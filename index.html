@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mmmcat.ai | Digital Universe</title>
+    <!-- Modern Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;500;600;700;800;900&family=Chakra+Petch:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+    <!-- P5.js Libraries -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.4.0/p5.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.4.0/addons/p5.sound.min.js"></script>
+</head>
+<body>
+    <div id="canvas-container"></div>
+    
+    <nav class="main-nav">
+        <div class="logo">C-01</div>
+        <ul class="nav-links">
+            <li><a href="social.html" class="nav-item">Social</a></li>
+            <li><a href="worlds.html" class="nav-item">Worlds</a></li>
+        </ul>
+    </nav>
+
+    <main>
+        <section class="hero">
+            <div class="hero-content">
+                <div class="hero-text">
+                    <h1>COSMIC</h1>
+                    <p class="hero-subtitle">WHERE DIGITAL MEETS INFINITY</p>
+                </div>
+                <div class="scroll-indicator">
+                    <span>Scroll to Explore</span>
+                    <div class="scroll-line"></div>
+                </div>
+            </div>
+        </section>
+
+        <section id="social" class="content-section">
+            <div class="section-inner">
+                <span class="section-number">01</span>
+                <h2>SOCIAL COSMOS</h2>
+                <div class="grid-container">
+                    <div class="feature-card">
+                        <span class="card-number">→</span>
+                        <h3>Digital Constellations</h3>
+                        <p>Connect with minds across the digital universe. Create your own constellation of connections.</p>
+                    </div>
+                    <div class="feature-card">
+                        <span class="card-number">→</span>
+                        <h3>Neural Networks</h3>
+                        <p>AI-powered social matching. Find your digital soulmates in the cosmic web.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="worlds" class="content-section">
+            <div class="section-inner">
+                <span class="section-number">02</span>
+                <h2>DIGITAL WORLDS</h2>
+                <div class="world-showcase">
+                    <div class="world-card">
+                        <div class="world-number">01</div>
+                        <h3>NEXUS</h3>
+                        <p>The central hub where all digital paths converge</p>
+                    </div>
+                    <div class="world-card">
+                        <div class="world-number">02</div>
+                        <h3>VOID</h3>
+                        <p>Pure creative space waiting to be shaped</p>
+                    </div>
+                    <div class="world-card">
+                        <div class="world-number">03</div>
+                        <h3>GENESIS</h3>
+                        <p>Where new digital life forms emerge</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <div class="loading">INITIALIZING</div>
+
+    <script>
+        // Hide loading screen when everything is ready
+        window.addEventListener('load', () => {
+            document.querySelector('.loading').classList.add('hidden');
+        });
+    </script>
+    <!-- Load your sketch after P5.js -->
+    <script src="final.js"></script>
+</body>
+</html> 

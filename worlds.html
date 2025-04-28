@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Worlds | Mmmcat.ai</title>
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;500;600;700;800;900&family=Chakra+Petch:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.4.0/p5.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.4.0/addons/p5.sound.min.js"></script>
+</head>
+<body>
+    <div id="canvas-container"></div>
+    
+    <nav class="main-nav">
+        <div class="logo">C-01</div>
+        <ul class="nav-links">
+            <li><a href="index.html" class="nav-item">Home</a></li>
+            <li><a href="social.html" class="nav-item">Social</a></li>
+            <li><a href="worlds.html" class="nav-item">Worlds</a></li>
+        </ul>
+    </nav>
+
+    <main>
+        <section class="worlds-section">
+            <div class="section-inner">
+                <h1>DIGITAL WORLDS</h1>
+                <div class="worlds-grid">
+                    <div class="world-card large">
+                        <div class="world-content">
+                            <h2>NEXUS</h2>
+                            <p>The central hub where all digital paths converge</p>
+                            <div class="world-stats">
+                                <div class="stat">
+                                    <span class="stat-label">Users</span>
+                                    <span class="stat-value">1.2M</span>
+                                </div>
+                                <div class="stat">
+                                    <span class="stat-label">Connections</span>
+                                    <span class="stat-value">4.5M</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="world-card">
+                        <div class="world-content">
+                            <h2>VOID</h2>
+                            <p>Pure creative space waiting to be shaped</p>
+                            <div class="world-stats">
+                                <div class="stat">
+                                    <span class="stat-label">Projects</span>
+                                    <span class="stat-value">500K</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="world-card">
+                        <div class="world-content">
+                            <h2>GENESIS</h2>
+                            <p>Where new digital life forms emerge</p>
+                            <div class="world-stats">
+                                <div class="stat">
+                                    <span class="stat-label">Innovations</span>
+                                    <span class="stat-value">10K</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <div class="loading">INITIALIZING</div>
+
+    <script>
+        // Hide loading screen when everything is ready
+        window.addEventListener('load', () => {
+            document.querySelector('.loading').classList.add('hidden');
+        });
+    </script>
+    <script src="final.js"></script>
+</body>
+</html> 

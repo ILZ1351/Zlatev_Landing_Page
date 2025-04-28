@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Social | Mmmcat.ai</title>
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;500;600;700;800;900&family=Chakra+Petch:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.4.0/p5.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.4.0/addons/p5.sound.min.js"></script>
+</head>
+<body>
+    <div id="canvas-container"></div>
+    
+    <nav class="main-nav">
+        <div class="logo">C-01</div>
+        <ul class="nav-links">
+            <li><a href="index.html" class="nav-item">Home</a></li>
+            <li><a href="social.html" class="nav-item">Social</a></li>
+            <li><a href="worlds.html" class="nav-item">Worlds</a></li>
+        </ul>
+    </nav>
+
+    <main>
+        <section class="social-section">
+            <div class="section-inner">
+                <h1>SOCIAL COSMOS</h1>
+                <div class="social-feed">
+                    <div class="feed-header">
+                        <div class="user-info">
+                            <div class="user-avatar"></div>
+                            <div class="user-details">
+                                <h3>Cosmic Explorer</h3>
+                                <span class="user-status">Online</span>
+                            </div>
+                        </div>
+                        <div class="feed-stats">
+                            <div class="stat">
+                                <span class="stat-value">2.5M</span>
+                                <span class="stat-label">Followers</span>
+                            </div>
+                            <div class="stat">
+                                <span class="stat-value">1.8M</span>
+                                <span class="stat-label">Following</span>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="feed-content">
+                        <div class="post-card">
+                            <div class="post-header">
+                                <div class="post-avatar"></div>
+                                <div class="post-info">
+                                    <h4>Nova Creator</h4>
+                                    <span class="post-time">2 hours ago</span>
+                                </div>
+                            </div>
+                            <p class="post-text">Just discovered a new constellation in the digital void. The patterns are mesmerizing! 🌌✨</p>
+                            <div class="post-stats">
+                                <span>❤️ 2.4K</span>
+                                <span>💬 342</span>
+                                <span>🔄 156</span>
+                            </div>
+                        </div>
+
+                        <div class="post-card">
+                            <div class="post-header">
+                                <div class="post-avatar"></div>
+                                <div class="post-info">
+                                    <h4>Quantum Thinker</h4>
+                                    <span class="post-time">5 hours ago</span>
+                                </div>
+                            </div>
+                            <p class="post-text">The neural networks are buzzing today! So many new connections forming in the cosmic web. 🕸️✨</p>
+                            <div class="post-stats">
+                                <span>❤️ 1.8K</span>
+                                <span>💬 245</span>
+                                <span>🔄 98</span>
+                            </div>
+                        </div>
+
+                        <div class="post-card">
+                            <div class="post-header">
+                                <div class="post-avatar"></div>
+                                <div class="post-info">
+                                    <h4>Void Walker</h4>
+                                    <span class="post-time">1 day ago</span>
+                                </div>
+                            </div>
+                            <p class="post-text">Exploring the depths of the digital universe. Who's joining me on this journey? 🚀🌠</p>
+                            <div class="post-stats">
+                                <span>❤️ 3.2K</span>
+                                <span>💬 512</span>
+                                <span>🔄 234</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <div class="loading">INITIALIZING</div>
+
+    <script>
+        // Hide loading screen when everything is ready
+        window.addEventListener('load', () => {
+            document.querySelector('.loading').classList.add('hidden');
+        });
+    </script>
+    <script src="final.js"></script>
+</body>
+</html> 

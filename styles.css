@@ -1,0 +1,677 @@
+/* Modern CSS Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --primary: #ffffff;
+    --secondary: #000000;
+    --accent: #00ffff;
+    --gray-light: rgba(255, 255, 255, 0.7);
+    --gray-dark: rgba(255, 255, 255, 0.1);
+    --font-heading: 'Orbitron', sans-serif;
+    --font-body: 'Chakra Petch', sans-serif;
+}
+
+body, html {
+    width: 100%;
+    height: 100%;
+    background: var(--secondary);
+    color: var(--primary);
+    font-family: var(--font-body);
+    line-height: 1.6;
+    overflow-x: hidden;
+}
+
+canvas {
+    position: fixed !important;
+    top: 0 !important;
+    left: 0 !important;
+    z-index: 0 !important;
+}
+
+/* Loading screen */
+.loading {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: var(--secondary);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+    font-family: var(--font-heading);
+    font-size: 1rem;
+    letter-spacing: 1rem;
+    transition: opacity 0.5s ease, visibility 0.5s ease;
+}
+
+.loading.hidden {
+    opacity: 0;
+    visibility: hidden;
+}
+
+/* Navigation */
+.main-nav {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1000;
+    padding: 1rem 2rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: rgba(0, 0, 0, 0.8);
+    backdrop-filter: blur(10px);
+}
+
+.logo {
+    font-family: var(--font-heading);
+    font-size: 1.2rem;
+    font-weight: 700;
+    letter-spacing: 2px;
+}
+
+.nav-links {
+    display: flex;
+    gap: 2rem;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.nav-item {
+    color: #fff;
+    text-decoration: none;
+    font-family: 'Orbitron', sans-serif;
+    font-size: 1rem;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    transition: color 0.3s ease;
+}
+
+.nav-item:hover {
+    color: #00ffff;
+}
+
+.cta-button {
+    background: linear-gradient(45deg, #00ff00, #00ffff);
+    padding: 0.5rem 1.5rem;
+    border-radius: 25px;
+    color: #000 !important;
+    font-weight: bold;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.cta-button:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 0 20px rgba(0, 255, 255, 0.5);
+}
+
+/* Hero Section */
+.hero {
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+}
+
+.hero-content {
+    text-align: center;
+    z-index: 2;
+}
+
+.hero h1 {
+    font-size: 8vw;
+    font-weight: 900;
+    letter-spacing: 1vw;
+    margin-bottom: 2rem;
+    position: relative;
+    display: inline-block;
+}
+
+.hero-subtitle {
+    font-size: 1rem;
+    letter-spacing: 0.5rem;
+    opacity: 0.7;
+    margin-bottom: 4rem;
+}
+
+.scroll-indicator {
+    position: absolute;
+    bottom: 2rem;
+    left: 50%;
+    transform: translateX(-50%);
+    text-align: center;
+    opacity: 0.7;
+}
+
+.scroll-line {
+    width: 1px;
+    height: 50px;
+    background: var(--primary);
+    margin: 1rem auto 0;
+    animation: scrollLine 2s ease-in-out infinite;
+}
+
+/* Content Sections */
+.content-section {
+    min-height: 100vh;
+    padding: 8rem 4rem;
+    position: relative;
+}
+
+.section-inner {
+    max-width: 1400px;
+    margin: 0 auto;
+    position: relative;
+}
+
+.section-number {
+    position: absolute;
+    top: -2rem;
+    left: 0;
+    font-size: 1rem;
+    font-weight: 700;
+    opacity: 0.5;
+}
+
+h2 {
+    font-size: 3rem;
+    margin-bottom: 4rem;
+    font-weight: 900;
+    letter-spacing: 0.5rem;
+}
+
+/* Grid Layout */
+.grid-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 4rem;
+}
+
+.feature-card {
+    padding: 2rem;
+    border: 1px solid var(--gray-dark);
+    position: relative;
+    transition: all 0.3s ease;
+}
+
+.feature-card:hover {
+    border-color: var(--gray-light);
+}
+
+.card-number {
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+    font-size: 1.5rem;
+    opacity: 0.5;
+}
+
+/* World Cards */
+.world-showcase {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem;
+}
+
+.world-card {
+    padding: 2rem;
+    border: 1px solid var(--gray-dark);
+    position: relative;
+    transition: all 0.3s ease;
+}
+
+.world-card:hover {
+    border-color: var(--accent);
+}
+
+.world-number {
+    font-size: 0.8rem;
+    opacity: 0.5;
+    margin-bottom: 1rem;
+}
+
+/* Explore Section */
+.explore-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 4rem;
+}
+
+.status-display {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem;
+    width: 100%;
+    max-width: 800px;
+}
+
+.status-item {
+    text-align: center;
+    font-size: 0.9rem;
+    letter-spacing: 2px;
+}
+
+.highlight {
+    color: var(--accent);
+}
+
+.launch-button {
+    display: inline-flex;
+    align-items: center;
+    gap: 1rem;
+    padding: 1rem 2rem;
+    border: 1px solid var(--primary);
+    text-decoration: none;
+    color: var(--primary);
+    font-size: 1rem;
+    letter-spacing: 4px;
+    transition: all 0.3s ease;
+    position: relative;
+    overflow: hidden;
+}
+
+.launch-button::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 0;
+    height: 100%;
+    background: var(--primary);
+    transition: width 0.3s ease;
+    z-index: -1;
+}
+
+.launch-button:hover {
+    color: var(--secondary);
+}
+
+.launch-button:hover::before {
+    width: 100%;
+}
+
+/* Animations */
+@keyframes scrollLine {
+    0% {
+        transform: scaleY(0);
+        transform-origin: top;
+    }
+    50% {
+        transform: scaleY(1);
+        transform-origin: top;
+    }
+    50.1% {
+        transform: scaleY(1);
+        transform-origin: bottom;
+    }
+    100% {
+        transform: scaleY(0);
+        transform-origin: bottom;
+    }
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .main-nav {
+        padding: 1.5rem;
+    }
+    
+    .nav-links {
+        gap: 1.5rem;
+    }
+    
+    .content-section {
+        padding: 4rem 2rem;
+    }
+    
+    .world-showcase {
+        grid-template-columns: 1fr;
+    }
+    
+    .status-display {
+        grid-template-columns: 1fr;
+    }
+    
+    h2 {
+        font-size: 2rem;
+    }
+}
+
+/* Launch Page Styles */
+.launch-section {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 2rem;
+}
+
+.launch-content {
+    text-align: center;
+    max-width: 800px;
+    width: 100%;
+}
+
+.countdown {
+    font-size: 8rem;
+    font-family: 'Orbitron', sans-serif;
+    color: #fff;
+    margin: 2rem 0;
+    text-shadow: 0 0 20px rgba(255, 255, 255, 0.5);
+}
+
+.launch-status {
+    margin: 2rem 0;
+}
+
+.launch-progress {
+    width: 100%;
+    height: 4px;
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 2px;
+    overflow: hidden;
+    margin: 2rem 0;
+}
+
+.progress-bar {
+    width: 0;
+    height: 100%;
+    background: linear-gradient(90deg, #00ff00, #00ffff);
+    transition: width 1s linear;
+}
+
+/* Add smooth transitions */
+a {
+    transition: all 0.3s ease;
+}
+
+/* Add hover effects to cards */
+.feature-card, .world-card {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.feature-card:hover, .world-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+}
+
+/* Worlds Page Styles */
+.worlds-section {
+    min-height: 100vh;
+    padding: 8rem 4rem;
+    position: relative;
+}
+
+.worlds-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 2rem;
+    margin-top: 4rem;
+}
+
+.world-card {
+    background: rgba(0, 0, 0, 0.5);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 10px;
+    padding: 2rem;
+    transition: all 0.3s ease;
+    position: relative;
+    overflow: hidden;
+}
+
+.world-card.large {
+    grid-column: span 2;
+    background: rgba(0, 0, 0, 0.7);
+}
+
+.world-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(45deg, rgba(0, 255, 255, 0.1), rgba(0, 255, 0, 0.1));
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.world-card:hover::before {
+    opacity: 1;
+}
+
+.world-content {
+    position: relative;
+    z-index: 1;
+}
+
+.world-content h2 {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+    font-family: 'Orbitron', sans-serif;
+}
+
+.world-content p {
+    font-size: 1rem;
+    opacity: 0.8;
+    margin-bottom: 2rem;
+}
+
+.world-stats {
+    display: flex;
+    gap: 2rem;
+}
+
+.stat {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.stat-label {
+    font-size: 0.8rem;
+    opacity: 0.6;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+.stat-value {
+    font-size: 1.5rem;
+    font-family: 'Orbitron', sans-serif;
+    color: #00ffff;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .worlds-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .world-card.large {
+        grid-column: span 1;
+    }
+    
+    .world-stats {
+        flex-direction: column;
+        gap: 1rem;
+    }
+}
+
+/* Social Page Styles */
+.social-section {
+    min-height: 100vh;
+    padding: 8rem 4rem;
+    position: relative;
+}
+
+.social-feed {
+    max-width: 800px;
+    margin: 4rem auto;
+    background: rgba(0, 0, 0, 0.5);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 15px;
+    overflow: hidden;
+}
+
+.feed-header {
+    padding: 2rem;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.user-info {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+.user-avatar {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    background: linear-gradient(45deg, #00ff00, #00ffff);
+    position: relative;
+}
+
+.user-avatar::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    border-radius: 50%;
+    background: rgba(0, 0, 0, 0.3);
+}
+
+.user-details h3 {
+    font-family: 'Orbitron', sans-serif;
+    font-size: 1.2rem;
+    margin-bottom: 0.5rem;
+}
+
+.user-status {
+    font-size: 0.8rem;
+    color: #00ff00;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.feed-stats {
+    display: flex;
+    gap: 2rem;
+}
+
+.feed-content {
+    padding: 2rem;
+}
+
+.post-card {
+    background: rgba(0, 0, 0, 0.3);
+    border: 1px solid rgba(255, 255, 255, 0.05);
+    border-radius: 10px;
+    padding: 1.5rem;
+    margin-bottom: 1.5rem;
+    transition: all 0.3s ease;
+}
+
+.post-card:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+}
+
+.post-header {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    margin-bottom: 1rem;
+}
+
+.post-avatar {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background: linear-gradient(45deg, #00ff00, #00ffff);
+    position: relative;
+}
+
+.post-avatar::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    border-radius: 50%;
+    background: rgba(0, 0, 0, 0.3);
+}
+
+.post-info h4 {
+    font-family: 'Orbitron', sans-serif;
+    font-size: 1rem;
+    margin-bottom: 0.25rem;
+}
+
+.post-time {
+    font-size: 0.8rem;
+    opacity: 0.6;
+}
+
+.post-text {
+    font-size: 1rem;
+    line-height: 1.6;
+    margin-bottom: 1rem;
+}
+
+.post-stats {
+    display: flex;
+    gap: 1.5rem;
+    font-size: 0.9rem;
+    opacity: 0.8;
+}
+
+.post-stats span {
+    cursor: pointer;
+    transition: opacity 0.3s ease;
+}
+
+.post-stats span:hover {
+    opacity: 1;
+}
+
+/* Responsive Design for Social Page */
+@media (max-width: 768px) {
+    .social-section {
+        padding: 6rem 2rem;
+    }
+    
+    .feed-header {
+        flex-direction: column;
+        gap: 1.5rem;
+        text-align: center;
+    }
+    
+    .user-info {
+        flex-direction: column;
+    }
+    
+    .feed-stats {
+        justify-content: center;
+    }
+    
+    .post-card {
+        padding: 1rem;
+    }
+} 
